@@ -19,6 +19,13 @@ const color = require("terminalcolors.js");
 console.log(color.bold("hello".blue()));
 ```
 
+# **IMPORTANT** If you are using an older version of node, the `"string".blue()` syntax might work. If so, try the following instead:
+```js
+const color = require("terminalcolors.js");
+
+console.log(color.blue("string"))'
+```
+
 ## The export will look like this: (for reference)
 ```js
 {
