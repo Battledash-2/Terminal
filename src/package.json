@@ -1,6 +1,6 @@
 {
   "name": "terminalcolors.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "`terminal.js` is able to make the terminal have any color you want! Even custom RGB colors if you're feeling like it!",
   "main": "index.js",
   "scripts": {
