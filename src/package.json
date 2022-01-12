@@ -1,0 +1,31 @@
+{
+  "name": "terminal.js",
+  "version": "1.0.0",
+  "description": "`terminal.js` is able to make the terminal have any color you want! Even custom RGB colors if you're feeling like it!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Battledash-2/Terminal.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "javascript",
+    "js",
+    "color",
+    "terminal.js",
+    "terminal",
+    "terminals",
+    "colors",
+    "colors.js"
+  ],
+  "author": "battledash2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Battledash-2/Terminal/issues"
+  },
+  "homepage": "https://github.com/Battledash-2/Terminal#readme"
+}

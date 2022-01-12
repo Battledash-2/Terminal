@@ -3,19 +3,19 @@ const Codes = require("./list");
 
 // Basic formatting: bold, dim, italic, underline and strike
 const basic = {
-    reset = function(a) {
+    bold: function(a) {
         return Construct.cons2b(Codes.format.noncolor.bold, a || this);
     },
-    dim = function(a) {
+    dim: function(a) {
         return Construct.cons2b(Codes.format.noncolor.dim, a || this);
     },
-    italic = function(a) {
+    italic: function(a) {
         return Construct.cons2b(Codes.format.noncolor.italic, a || this);
     },
-    underline = function(a) {
+    underline: function(a) {
         return Construct.cons2b(Codes.format.noncolor.underline, a || this);
     },
-    strike = function(a) {
+    strike: function(a) {
         return Construct.cons2b(Codes.format.noncolor.strike, a || this);
     }
 }
@@ -60,110 +60,118 @@ const reset = {
 
 // foreground colors
 const foreground = {
-    black: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.black, a || this);
+    rgb(r,g,b, str) {
+        return Construct.cons6b(38, 2, r, g, b, str || this);
     },
-    red: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.red, a || this);
+
+    black: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.black, a || this);
     },
-    green: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.green, a || this);
+    red: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.red, a || this);
     },
-    yellow: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.yellow, a || this);
+    green: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.green, a || this);
     },
-    blue: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.blue, a || this);
+    yellow: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.yellow, a || this);
     },
-    magenta: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.magenta, a || this);
+    blue: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.blue, a || this);
     },
-    cyan: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.cyan, a || this);
+    magenta: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.magenta, a || this);
     },
-    white: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.standard.white, a || this);
+    cyan: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.cyan, a || this);
+    },
+    white: function(a) {
+        return Construct.cons4b(38, 5, Codes.format.color.standard.white, a || this);
     },
 }
 
 const background = {
+    rgb(r,g,b, str) {
+        return Construct.cons6b(48, 2, r, g, b, str || this);
+    },
+
     black: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.black, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.black, a || this);
     },
     red: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.red, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.red, a || this);
     },
     green: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.green, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.green, a || this);
     },
     yellow: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.yellow, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.yellow, a || this);
     },
     blue: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.blue, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.blue, a || this);
     },
     magenta: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.magenta, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.magenta, a || this);
     },
     cyan: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.cyan, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.cyan, a || this);
     },
     white: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.standard.white, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.standard.white, a || this);
     },
 }
 
 const foreground_high_intensity = {
     darkGray: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.dark_gray, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.dark_gray, a || this);
     },
     brightRed: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.bright_red, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.bright_red, a || this);
     },
     brightGreen: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.bright_green, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.bright_green, a || this);
     },
     brightYellow: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.bright_yellow, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.bright_yellow, a || this);
     },
     darkBlue: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.dark_blue, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.dark_blue, a || this);
     },
     brightMagenta: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.bright_magenta, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.bright_magenta, a || this);
     },
     brightCyan: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.bright_cyan, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.bright_cyan, a || this);
     },
     brightWhite: function(a, b) {
-        return Construct.cons4b(38, 5, b || 0, Codes.format.color.high_intensity.bright_white, a || this);
+        return Construct.cons4b(38, 5, Codes.format.color.high_intensity.bright_white, a || this);
     },
 }
 
 const background_high_intensity = {
     darkGray: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.dark_gray, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.dark_gray, a || this);
     },
     brightRed: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.bright_red, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.bright_red, a || this);
     },
     brightGreen: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.bright_green, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.bright_green, a || this);
     },
     brightYellow: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.bright_yellow, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.bright_yellow, a || this);
     },
     darkBlue: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.dark_blue, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.dark_blue, a || this);
     },
     brightMagenta: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.bright_magenta, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.bright_magenta, a || this);
     },
     brightCyan: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.bright_cyan, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.bright_cyan, a || this);
     },
     brightWhite: function(a, b) {
-        return Construct.cons4b(48, 5, b || 0, Codes.format.color.high_intensity.bright_white, a || this);
+        return Construct.cons4b(48, 5, Codes.format.color.high_intensity.bright_white, a || this);
     },
 }
 
@@ -179,9 +187,17 @@ const full = {
     }
 }
 
-String.prototype = {
-    ...String.prototype,
-    full
+for (let name in full) {
+    String.prototype[name] = full[name];
 }
 
-module.exports = full;
+/*
+String.prototype = {
+    ...String.prototype,
+    ...full
+}
+*/
+
+module.exports = {
+    ...full
+};
