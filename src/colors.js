@@ -63,6 +63,10 @@ const foreground = {
     rgb(r,g,b, str) {
         return Construct.cons6b(38, 2, r, g, b, str || this);
     },
+    hex(hex, str) {
+        const rgb = Construct.hexToRGB(hex);
+        return Construct.cons6b(38, 2, rgb[0], rgb[1], rgb[2], str || this);
+    },
 
     black: function(a) {
         return Construct.cons4b(38, 5, Codes.format.color.standard.black, a || this);
@@ -93,6 +97,10 @@ const foreground = {
 const background = {
     rgb(r,g,b, str) {
         return Construct.cons6b(48, 2, r, g, b, str || this);
+    },
+    hex(hex, str) {
+        const rgb = Construct.hexToRGB(hex);
+        return Construct.cons6b(48, 2, rgb[0], rgb[1], rgb[2]);
     },
 
     black: function(a, b) {

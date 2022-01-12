@@ -1,32 +1,32 @@
 {
-  "name": "terminalcolors.js",
-  "version": "1.0.5",
-  "description": "`terminal.js` is able to make the terminal have any color you want! Even custom RGB colors if you're feeling like it!",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Battledash-2/Terminal.git"
-  },
-  "types": "types",
-  "keywords": [
-    "node",
-    "nodejs",
-    "javascript",
-    "js",
-    "color",
-    "terminal.js",
-    "terminal",
-    "terminals",
-    "colors",
-    "colors.js"
-  ],
-  "author": "battledash2",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Battledash-2/Terminal/issues"
-  },
-  "homepage": "https://github.com/Battledash-2/Terminal#readme",
-  "scripts": {
-    "test": "echo \"No test\""
-  }
+	"name": "terminalcolors.js",
+	"version": "1.0.6",
+	"description": "`terminal.js` is able to make the terminal have any color you want! Even custom RGB colors if you're feeling like it!",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Battledash-2/Terminal.git"
+	},
+	"types": "types",
+	"keywords": [
+		"node",
+		"nodejs",
+		"javascript",
+		"js",
+		"color",
+		"terminal.js",
+		"terminal",
+		"terminals",
+		"colors",
+		"colors.js"
+	],
+	"author": "battledash2",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Battledash-2/Terminal/issues"
+	},
+	"homepage": "https://github.com/Battledash-2/Terminal#readme",
+	"scripts": {
+		"test": "echo \"No test\""
+	}
 }
