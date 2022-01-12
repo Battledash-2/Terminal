@@ -7,14 +7,14 @@
 
 ### First, require it.
 ```js
-require("<path>");
+require("terminalcolors.js");
 
 console.log("hello".green());
 ```
 
 ## Note: If you want to use multiple styles, you must use the following syntax:
 ```js
-const color = require("<path>");
+const color = require("terminalcolors.js");
 
 console.log(color.bold("hello".blue()));
 ```
