@@ -118,11 +118,11 @@ declare global {
             strike: (a: any) => string;
             color: (a: any) => string;
         };
-        bold: (a: any) => string;
+        bold: () => string;
         dim: (a: any) => string;
         italic: (a: any) => string;
         underline: (a: any) => string;
-        strike: (a: any) => string;
+        strike: () => string;
     }
 }
 
